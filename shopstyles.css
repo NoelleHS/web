@@ -5,45 +5,12 @@ body {
   
 }
 
-.dot {
-  height: 100px;
-  width: 100px;
-  background-color: #931616;
-  border-radius: 50%;
-  display: inline-block;
-}
 
 .buttons {
   padding-left: 34vw;
   padding-top: 40vh;
 }
 
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  margin-left: 3vw;
-
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #e52b2b;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #e37676;
-}
-
-.button:hover {
-  background-color: #f04242
-}
-
-.button:active {
-  background-color: #e52b2b;
-  box-shadow: 0 5px #e37676;
-  transform: translateY(4px);
-}
 
 .item {
   height: 10vh;
@@ -55,7 +22,7 @@ div.listings{
   height:53vh;
   width:68vw;
  padding-left:4vw;
- margin-top:18vh;
+ margin-top:23vh;
  overflow:auto;
  
 }
@@ -71,7 +38,6 @@ div.gallery {
   float: inline-start;
   width: 180px;
   height: 40vh;
- 
   background-color: #4bbeef;
 }
 
@@ -88,4 +54,113 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
+}
+
+
+/*** CSS - APP USE ***/
+.btn-wrapper:not(:first-child) {
+  margin-top: 15px;
+}
+
+.btn-wrapper {/*** change scifi button height here with "height" ***/
+  display: grid;
+  grid-template-columns: 20px auto;
+  grid-gap: 10px;
+  min-width: 30vw;
+  height: 0.01vh;
+  margin-left: 7vw;
+  margin-right: 70vw;
+  transform: skewX(-30deg);
+  text-decoration: none;
+
+  --bg-color: #fffff0;
+  --font-color: #000000;
+  --bg-color-hovered: #29cacd;
+  --font-color-hovered: #000000;
+}
+
+.btn-wrapper>* {
+  background-color: var(--bg-color);
+  text-decoration: none;
+}
+
+.btn-wrapper:hover .btn-tail {
+  text-decoration: none;
+  background-color: var(--bg-color-hovered);
+}
+
+.btn-body {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  align-items: center;
+  color: var(--font-color);
+}
+
+.btn-wrapper:hover .btn-body {
+  color: var(--font-color-hovered);
+}
+
+.btn-body::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  text-decoration: none;
+  left: 0;
+  top: 0;
+  background-color: var(--bg-color-hovered);
+  transition: all 0.3s ease-out;
+}
+
+.btn-wrapper:hover .btn-body::before {
+  width: 100%;
+}
+
+.btn-body p {
+  text-decoration: none;
+  margin-left: 1vw;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  transform: skewX(30deg);
+}
+
+.btn-tail {
+  transition: all 0s ease-out 0.3s;
+}
+
+.btn-wrapper:hover .btn-tail {
+  transition: none;
+}
+
+.app-wrapper {
+  display: grid;
+  grid-template-rows: minmax(50px, 150px) minmax(300px, 1fr) minmax(25px, 100px);
+  width: 100%;
+  height: 100%;
+}
+
+.app-header,
+.app-footer {
+  background-color: #252525;
+}
+
+.app-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #808080;
+}
+
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-header>h1 {
+  color: #ffffff;
+  mix-blend-mode: difference;
 }

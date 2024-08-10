@@ -2,20 +2,9 @@ body {
   background-image: url("img/computerscreen.jpg");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
-  animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+ 
 }
 
-
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
 h1 {
   font-family: 'Roboto';
   font-size: 4vw;
@@ -195,7 +184,7 @@ a {
 .console-container {
  
   font-family:Khula;
-  font-size:4em;
+  font-size:7vh;
   text-align:center;
   height: 7vh;
   width:100vw;
@@ -207,6 +196,7 @@ a {
   left:0;
   right:0;
   margin-left:0vw;
+ 
 }
 .console-underscore {
    display:inline-block;

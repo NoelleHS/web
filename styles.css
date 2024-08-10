@@ -1,0 +1,34 @@
+body {
+    background-image: url("computerscreen.jpg");
+    background-repeat: no-repeat;
+    background-size:  100vw 100vh;
+  }
+  
+.buttons{
+    padding-left:34vw;
+    padding-top:40vh;
+}
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-left:3vw;
+    
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #e52b2b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #e37676;
+  }
+  
+  .button:hover {background-color:#f04242}
+  
+  .button:active {
+    background-color: #e52b2b;
+    box-shadow: 0 5px #e37676;
+    transform: translateY(4px);
+  }

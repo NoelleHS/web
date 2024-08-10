@@ -1,0 +1,72 @@
+body {
+    background-image: url("space.jpg");
+    background-repeat: no-repeat;
+    background-size:  100vw 100vh;
+  }
+  
+
+  .dot {
+    height: 100px;
+    width: 100px;
+    background-color: #931616;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .buttons{
+    padding-left:34vw;
+    padding-top:40vh;
+}
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    margin-left:3vw;
+    
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #e52b2b;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #e37676;
+  }
+  
+  .button:hover {background-color:#f04242}
+  
+  .button:active {
+    background-color: #e52b2b;
+    box-shadow: 0 5px #e37676;
+    transform: translateY(4px);
+  }
+ .item{
+    height: 10vh;
+   
+ } 
+  div.gallery {
+    margin: 5px;
+    margin-top:20vh;
+    border: 1px solid #ccc;
+    float:inline-start;
+    
+    width: 180px;
+    height:40vh;
+    background-color: #4bbeef;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+    background-color: #6fd1fb;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }

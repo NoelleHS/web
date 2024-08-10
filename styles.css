@@ -2,9 +2,20 @@ body {
   background-image: url("img/computerscreen.jpg");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 h1 {
   font-family: 'Roboto';
   font-size: 4vw;
@@ -18,7 +29,7 @@ h1 {
 }
 
 .buttons {/*** change scifi button width here ***/
-  padding-top: 20vh;
+  padding-top: 50vh;
   padding-left: 25vw;
   padding-right: 25vw;
 }
@@ -173,4 +184,33 @@ a {
 
 .btn-wrapper:hover .btn-tail {
   transition: none;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  font-family:Khula;
+  font-size:4em;
+  text-align:center;
+  height: 7vh;
+  width:100vw;
+  display:block;
+  position:absolute;
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin-left:0vw;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
 }

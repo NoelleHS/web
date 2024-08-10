@@ -1,160 +1,176 @@
 body {
-    background-image: url("computerscreen.jpg");
-    background-repeat: no-repeat;
-    background-size:  100vw 100vh;
-  }
-  
-.buttons{
-padding-top:50vh;
-padding-left:35vw;
-padding-right:40vw;
+  background-image: url("img/computerscreen.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
 }
-  .button {
-    display: inline-block;
-    padding: 15px 25px;
-    margin-left:3vw;
-    
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: #e52b2b;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #e37676;
-  }
-  
-  .button:hover {background-color:#f04242}
-  
-  .button:active {
-    background-color: #e52b2b;
-    box-shadow: 0 5px #e37676;
-    transform: translateY(4px);
-  }
+
+
+h1 {
+  font-family: 'Roboto';
+  font-size: 4vw;
+  ;
+  color: white;
+  display: fixed;
+  padding-left: 15vw;
+  padding-right: 0vw;
+  padding-top: 10vh;
+
+}
+
+.buttons {/*** change scifi button width here ***/
+  padding-top: 20vh;
+  padding-left: 25vw;
+  padding-right: 25vw;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  margin-left: 3vw;
+
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #e52b2b;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #e37676;
+}
+
+.button:hover {
+  background-color: #f04242
+}
+
+.button:active {
+  background-color: #e52b2b;
+  box-shadow: 0 5px #e37676;
+  transform: translateY(4px);
+}
 
 
 
-  /*** CSS - RESET ***/
+/*** CSS - RESET ***/
 html,
 body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	font-family: "Roboto Condensed", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 h1,
 h2,
 h3,
 p {
-	margin: 0;
+  margin: 0;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 /*** CSS - APP LAYOUT ***/
 .app-wrapper {
-	display: grid;
-	grid-template-rows: minmax(50px, 150px) minmax(300px, 1fr) minmax(25px, 100px);
-	width: 100%;
-	height: 100%;
+  display: grid;
+  grid-template-rows: minmax(50px, 150px) minmax(300px, 1fr) minmax(25px, 100px);
+  width: 100%;
+  height: 100%;
 }
 
 .app-header,
 .app-footer {
-	background-color: #252525;
+  background-color: #252525;
 }
 
 .app-body {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	background-color: #808080;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #808080;
 }
 
 .app-header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.app-header > h1 {
-	color: #ffffff;
-	mix-blend-mode: difference;
+.app-header>h1 {
+  color: #ffffff;
+  mix-blend-mode: difference;
 }
 
 /*** CSS - APP USE ***/
 .btn-wrapper:not(:first-child) {
-	margin-top: 15px;
+  margin-top: 15px;
 }
 
-.btn-wrapper {
-	display: grid;
-	grid-template-columns: 20px auto;
-	grid-gap: 10px;
-	min-width: 250px;
-	height: 35px;
-	margin-left: 10px;
-	transform: skewX(-30deg);
+.btn-wrapper {/*** change scifi button height here with "height" ***/
+  display: grid;
+  grid-template-columns: 20px auto;
+  grid-gap: 10px;
+  min-width: 250px;
+  height: 70px;
+  margin-left: 10px;
+  transform: skewX(-30deg);
 
-	--bg-color: #fffff0;
-	--font-color: #000000;
-	--bg-color-hovered: #29cacd;
-	--font-color-hovered: #000000;
+  --bg-color: #fffff0;
+  --font-color: #000000;
+  --bg-color-hovered: #29cacd;
+  --font-color-hovered: #000000;
 }
 
-.btn-wrapper > * {
-	background-color: var(--bg-color);
+.btn-wrapper>* {
+  background-color: var(--bg-color);
 }
 
 .btn-wrapper:hover .btn-tail {
-	background-color: var(--bg-color-hovered);
+  background-color: var(--bg-color-hovered);
 }
 
 .btn-body {
-	position: relative;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	color: var(--font-color);
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--font-color);
 }
 
 .btn-wrapper:hover .btn-body {
-	color: var(--font-color-hovered);
+  color: var(--font-color-hovered);
 }
 
 .btn-body::before {
-	content: "";
-	position: absolute;
-	width: 0;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background-color: var(--bg-color-hovered);
-	transition: all 0.3s ease-out;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--bg-color-hovered);
+  transition: all 0.3s ease-out;
 }
 
 .btn-wrapper:hover .btn-body::before {
-	width: 100%;
+  width: 100%;
 }
 
 .btn-body p {
-	margin-left: 15px;
-	font-size: 1.5rem;
-	text-transform: uppercase;
-	transform: skewX(30deg);
+  margin-left: 15px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  transform: skewX(30deg);
 }
 
 .btn-tail {
-	transition: all 0s ease-out 0.3s;
+  transition: all 0s ease-out 0.3s;
 }
 
 .btn-wrapper:hover .btn-tail {
-	transition: none;
+  transition: none;
 }

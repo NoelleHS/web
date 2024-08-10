@@ -5,8 +5,9 @@ body {
   }
   
 .buttons{
-    padding-left:34vw;
-    padding-top:40vh;
+padding-top:50vh;
+padding-left:35vw;
+padding-right:40vw;
 }
   .button {
     display: inline-block;
@@ -32,3 +33,128 @@ body {
     box-shadow: 0 5px #e37676;
     transform: translateY(4px);
   }
+
+
+
+  /*** CSS - RESET ***/
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/*** CSS - APP LAYOUT ***/
+.app-wrapper {
+	display: grid;
+	grid-template-rows: minmax(50px, 150px) minmax(300px, 1fr) minmax(25px, 100px);
+	width: 100%;
+	height: 100%;
+}
+
+.app-header,
+.app-footer {
+	background-color: #252525;
+}
+
+.app-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	background-color: #808080;
+}
+
+.app-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.app-header > h1 {
+	color: #ffffff;
+	mix-blend-mode: difference;
+}
+
+/*** CSS - APP USE ***/
+.btn-wrapper:not(:first-child) {
+	margin-top: 15px;
+}
+
+.btn-wrapper {
+	display: grid;
+	grid-template-columns: 20px auto;
+	grid-gap: 10px;
+	min-width: 250px;
+	height: 35px;
+	margin-left: 10px;
+	transform: skewX(-30deg);
+
+	--bg-color: #fffff0;
+	--font-color: #000000;
+	--bg-color-hovered: #29cacd;
+	--font-color-hovered: #000000;
+}
+
+.btn-wrapper > * {
+	background-color: var(--bg-color);
+}
+
+.btn-wrapper:hover .btn-tail {
+	background-color: var(--bg-color-hovered);
+}
+
+.btn-body {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: var(--font-color);
+}
+
+.btn-wrapper:hover .btn-body {
+	color: var(--font-color-hovered);
+}
+
+.btn-body::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: var(--bg-color-hovered);
+	transition: all 0.3s ease-out;
+}
+
+.btn-wrapper:hover .btn-body::before {
+	width: 100%;
+}
+
+.btn-body p {
+	margin-left: 15px;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	transform: skewX(30deg);
+}
+
+.btn-tail {
+	transition: all 0s ease-out 0.3s;
+}
+
+.btn-wrapper:hover .btn-tail {
+	transition: none;
+}

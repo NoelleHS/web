@@ -47,17 +47,31 @@ body {
 
 .item {
   height: 10vh;
+  
+}
+div.listings{
+  margin-left:15vw;
 
+  height:53vh;
+  width:68vw;
+ padding-left:4vw;
+ margin-top:18vh;
+ overflow:auto;
+ 
 }
 
+div.row{
+  display:block;
+  margin-top:0px;
+}
 div.gallery {
   margin: 5px;
-  margin-top: 20vh;
+  margin-top: 2vh;
   border: 1px solid #ccc;
   float: inline-start;
-
   width: 180px;
   height: 40vh;
+ 
   background-color: #4bbeef;
 }
 
